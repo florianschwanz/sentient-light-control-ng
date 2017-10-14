@@ -41,8 +41,8 @@ var ToolbarComponent = (function () {
     ToolbarComponent = __decorate([
         core_1.Component({
             selector: 'app-toolbar',
-            templateUrl: './stacks-toolbar.component.html',
-            styles: [require('./stacks-toolbar.component.scss')]
+            templateUrl: './floor-toolbar.component.html',
+            styles: [require('./floor-toolbar.component.scss')]
         })
     ], ToolbarComponent);
     return ToolbarComponent;

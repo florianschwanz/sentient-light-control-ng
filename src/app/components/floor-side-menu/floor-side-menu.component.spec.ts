@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {StacksToolbarComponent} from './stacks-toolbar.component';
+import {FloorSideMenuComponent} from './floor-side-menu.component';
 
-describe('StacksToolbarComponent', () => {
-  let component: StacksToolbarComponent;
-  let fixture: ComponentFixture<StacksToolbarComponent>;
+describe('FloorSideMenuComponent', () => {
+  let component: FloorSideMenuComponent;
+  let fixture: ComponentFixture<FloorSideMenuComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [StacksToolbarComponent]
+      declarations: [FloorSideMenuComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StacksToolbarComponent);
+    fixture = TestBed.createComponent(FloorSideMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

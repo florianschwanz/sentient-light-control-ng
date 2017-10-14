@@ -1,0 +1,16 @@
+<app-floor-toolbar
+  class="fixed"
+  [title]="title"
+  (onMenuItemClicked)="onMenuItemClicked($event)"></app-floor-toolbar>
+
+<md-sidenav-container class="sidenav-container" layout="column">
+  <md-sidenav #sidenav mode="side" class="sidenav">
+    <app-floor-side-menu (onMenuItemClicked)="onSideMenuItemClicked($event)"></app-floor-side-menu>
+  </md-sidenav>
+
+  <div class="content">
+
+
+  </div>
+
+</md-sidenav-container>
