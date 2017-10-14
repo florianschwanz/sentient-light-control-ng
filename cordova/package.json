@@ -1,7 +1,7 @@
 {
-    "name": "de.interoberlin.amphibian",
+    "name": "de.interoberlin.sentient-light-console-ng",
     "version": "1.0.0",
-    "displayName": "Amphibian",
+    "displayName": "Sentient Light Console",
     "cordova": {
         "platforms": [
             "android"

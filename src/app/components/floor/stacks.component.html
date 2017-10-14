@@ -1,0 +1,17 @@
+<app-stacks-toolbar
+  class="fixed"
+  [title]="title"
+  (onMenuItemClicked)="onMenuItemClicked($event)"></app-stacks-toolbar>
+
+<md-sidenav-container class="sidenav-container" layout="column">
+  <md-sidenav #sidenav mode="side" class="sidenav">
+    <app-side-menu (onMenuItemClicked)="onSideMenuItemClicked($event)"></app-side-menu>
+  </md-sidenav>
+
+  <div class="content">
+    <app-file-drop (uploadedFiles)="uploadedFiles($event)"></app-file-drop>
+    <app-stack *ngFor="let s of stacks" [stack]="s">
+    </app-stack>
+  </div>
+
+</md-sidenav-container>

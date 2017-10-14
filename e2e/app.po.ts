@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class AmphibianPage {
+export class Sentient Light ConsolePage {
   navigateTo() {
     return browser.get('/');
   }

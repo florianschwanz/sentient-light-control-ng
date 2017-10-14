@@ -16,8 +16,8 @@ npm install -g @angular/cli
 ```
 * initialize project
 ```
-mkdir amphibian
-cd amphibian
+mkdir sentient-light-console-ng
+cd sentient-light-console-ng
 ng init
 ```
 
@@ -87,7 +87,7 @@ app.on('activate', () => {
 * add file src/electron/package.json
 ```
 {
-  "name"    : "amphibian",
+  "name"    : "sentient-light-console-ng",
   "version" : "0.0.0",
   "main"    : "electron.ts"
 }
@@ -107,8 +107,8 @@ mkdir cordova/www
 * create file cordova/config.xml
 ```
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="de.interoberlin.amphibian" version="1.0.0" android-versionCode="1">
-  <name>Amphibian</name>
+<widget id="de.interoberlin.sentient-light-console-ng" version="1.0.0" android-versionCode="1">
+  <name>Sentient Light Console</name>
   <description>
     A sample Apache Cordova application
   </description>

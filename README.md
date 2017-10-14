@@ -1,4 +1,4 @@
-# Amphibian
+# Sentient Light Control
 
 ## Aim
 

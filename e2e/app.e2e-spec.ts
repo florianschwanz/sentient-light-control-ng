@@ -1,10 +1,10 @@
-import {AmphibianPage} from './app.po';
+import {Sentient Light ConsolePage} from './app.po';
 
-describe('amphibian App', function () {
-  let page: AmphibianPage;
+describe('sentient-light-console-ng App', function () {
+  let page: Sentient Light ConsolePage;
 
   beforeEach(() => {
-    page = new AmphibianPage();
+    page = new Sentient Light ConsolePage();
   });
 
   it('should display message saying app works', () => {

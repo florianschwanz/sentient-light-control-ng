@@ -1,5 +1,5 @@
 {
-  "name"    : "amphibian",
+  "name"    : "sentient-light-console-ng",
   "version" : "0.0.0",
   "main"    : "electron.ts"
 }
