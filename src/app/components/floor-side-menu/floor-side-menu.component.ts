@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Sensor} from '../../model/sensor.model';
 
 @Component({
   selector: 'app-floor-side-menu',
@@ -6,6 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./floor-side-menu.component.scss']
 })
 export class FloorSideMenuComponent implements OnInit {
+  @Input() sensor: Sensor;
   @Output() onMenuItemClicked = new EventEmitter<string>();
 
   menuItems = [];
@@ -14,8 +16,6 @@ export class FloorSideMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.menuItems.push('Hello');
-    this.menuItems.push('World');
   }
 
   clickMenuItem(menuItem: string): void {

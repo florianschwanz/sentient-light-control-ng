@@ -6,26 +6,31 @@ import {AppComponent} from './app.component';
 import {ResponsiveModule} from 'ng2-responsive';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MdButtonModule,
-  MdCardModule,
-  MdListModule,
-  MdMenuModule,
-  MdSidenavModule,
-  MdSnackBarModule,
-  MdToolbarModule
+  MatButtonModule,
+  MatCardModule,
+  MatListModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatSnackBarModule,
+  MatToolbarModule
 } from '@angular/material';
 import {AppRoutingModule} from './app-routing.module';
 import {SnackbarService} from './services/snackbar.service';
 import {FloorComponent} from './components/floor/floor.component';
 import {FloorToolbarComponent} from './components/floor-toolbar/floor-toolbar.component';
 import {FloorSideMenuComponent} from './components/floor-side-menu/floor-side-menu.component';
+import {SensorComponent} from './components/sensor/sensor.component';
+import {SensorService} from './services/sensor.service';
+import {SensorDetailsComponent} from './components/sensor-details/sensor-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FloorComponent,
     FloorToolbarComponent,
-    FloorSideMenuComponent
+    FloorSideMenuComponent,
+    SensorComponent,
+    SensorDetailsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -34,15 +39,15 @@ import {FloorSideMenuComponent} from './components/floor-side-menu/floor-side-me
     FormsModule,
     HttpModule,
     ResponsiveModule,
-    MdButtonModule,
-    MdToolbarModule,
-    MdSidenavModule,
-    MdSnackBarModule,
-    MdCardModule,
-    MdMenuModule,
-    MdListModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatCardModule,
+    MatMenuModule,
+    MatListModule
   ],
-  providers: [SnackbarService],
+  providers: [SnackbarService, SensorService],
   bootstrap: [AppComponent]
 })
 

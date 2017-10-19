@@ -16,6 +16,11 @@
   width: 232px;
 }
 
+.floor-plan, .floor-sensor {
+  float: left;
+  position: absolute;
+}
+
 .content {
   @media #{$md-small} {
     padding-top: 88px;
@@ -37,14 +42,17 @@
 .sidenav {
   @media #{$md-small} {
     padding-top: 88px;
+    margin-left: 5px;
     margin-right: 10px;
   }
   @media #{$md-medium} {
     padding-top: 88px;
+    margin-left: 10px;
     margin-right: 20px;
   }
   @media #{$md-large} {
     padding-top: 88px;
+    margin-left: 20px;
     margin-right: 40px;
   }
 }

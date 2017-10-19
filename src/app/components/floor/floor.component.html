@@ -3,14 +3,19 @@
   [title]="title"
   (onMenuItemClicked)="onMenuItemClicked($event)"></app-floor-toolbar>
 
-<md-sidenav-container class="sidenav-container" layout="column">
-  <md-sidenav #sidenav mode="side" class="sidenav">
-    <app-floor-side-menu (onMenuItemClicked)="onSideMenuItemClicked($event)"></app-floor-side-menu>
-  </md-sidenav>
+<mat-sidenav-container class="sidenav-container" layout="column">
+  <mat-sidenav #sidenav mode="side" class="sidenav">
+    <app-floor-side-menu [sensor]="selectedSensor" (onMenuItemClicked)="onSideMenuItemClicked($event)"></app-floor-side-menu>
+  </mat-sidenav>
 
   <div class="content">
 
+    <img class="floor-plan"
+         src="assets/floor-plan.svg">
+
+    <app-sensor [ngClass]="'floor-sensor'" *ngFor="let s of sensors" [sensor]="s"
+                [ngStyle]="{'margin-left': s.x, 'margin-top': s.y}"></app-sensor>
 
   </div>
 
-</md-sidenav-container>
+</mat-sidenav-container>

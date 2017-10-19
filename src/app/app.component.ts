@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MdSnackBar} from '@angular/material';
+import {MatSnackBar} from '@angular/material';
 import {SnackbarService} from './services/snackbar.service';
 
 @Component({
@@ -9,7 +9,7 @@ import {SnackbarService} from './services/snackbar.service';
 })
 export class AppComponent implements OnInit {
   constructor(private snackbarService: SnackbarService,
-              public snackBar: MdSnackBar) {
+              public snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {

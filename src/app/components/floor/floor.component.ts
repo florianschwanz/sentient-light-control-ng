@@ -1,6 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatSidenav} from '@angular/material';
+import {SENSORS} from '../../model/sensors.repo';
+import {SensorService} from '../../services/sensor.service';
 import {SnackbarService} from '../../services/snackbar.service';
-import {MdSidenav} from '@angular/material';
 
 @Component({
   selector: 'app-floor',
@@ -8,13 +10,22 @@ import {MdSidenav} from '@angular/material';
   styles: [require('./floor.component.scss')]
 })
 export class FloorComponent implements OnInit {
-  @ViewChild('sidenav') sidenav: MdSidenav;
+  @ViewChild('sidenav') sidenav: MatSidenav;
   title = 'Sentient Light Console';
+  sensors = [];
+  selectedSensor = {};
 
-  constructor(private snackbarService: SnackbarService) {
+  constructor(private snackbarService: SnackbarService, private sensorService: SensorService) {
   }
 
   ngOnInit() {
+    this.sensors = SENSORS;
+    this.sensorService.selectedSensorSubject.subscribe(
+      (sensor) => {
+        this.sidenav.open();
+        this.selectedSensor = sensor;
+      }
+    );
   }
 
   /**
@@ -42,6 +53,11 @@ export class FloorComponent implements OnInit {
    * @param menuItem
    */
   onSideMenuItemClicked(menuItem: string) {
-    this.snackbarService.showSnackbar(`Clicked on side menu item ${menuItem}`, '');
+    this.snackbarService.showSnackbar(`
+        Clicked
+        on
+        side
+        menu
+        item ${menuItem}`, '');
   }
 }
